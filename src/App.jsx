@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { createTodo, getTodo } from './features/Todo/thunk'
+import TodoApp from './components/Todo'
 
 const App = () => {
 
@@ -16,7 +17,7 @@ const App = () => {
 
   return (
     <>
-      <button onClick={getData}>Add</button>
+      <TodoApp/>
     </>
   )
 }

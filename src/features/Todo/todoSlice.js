@@ -4,7 +4,7 @@ import { createTodo, deleteTodo, getTodo } from "./thunk";
 const initialState = {
     todo : [],
     loading : false,
-    error : false,
+    error : null,
 }
 
 const todoSlice = createSlice({
@@ -16,7 +16,7 @@ const todoSlice = createSlice({
         // create
         builder.addCase(createTodo.pending,(state)=>{
             state.loading = true;
-            state.error = false
+            state.error = null
         })
         builder.addCase(createTodo.fulfilled,(state,action)=>{
             state.loading = false;
@@ -30,7 +30,7 @@ const todoSlice = createSlice({
         // get data
         builder.addCase(getTodo.pending,(state)=>{
             state.loading = true;
-            state.error = false
+            state.error = null
         })
         builder.addCase(getTodo.fulfilled,(state,action)=>{
             state.loading = false;
@@ -44,7 +44,7 @@ const todoSlice = createSlice({
         // delete
         builder.addCase(deleteTodo.pending,(state)=>{
             state.loading = true;
-            state.error = false
+            state.error = null
         })
         builder.addCase(deleteTodo.fulfilled,(state,action)=>{
             state.loading = false;
