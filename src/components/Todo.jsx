@@ -55,7 +55,7 @@ const TodoApp = () => {
     <div className="container py-5">
       <div className="card shadow-lg border-0">
         <div className="card-header text-white text-center" style={{ background: 'linear-gradient(135deg, #6c63ff, #5c45d3)' }}>
-          <h3 className="mb-0 text-black">📋 Firebase Todo App with Status</h3>
+          <h3 className="mb-0 text-black">📋 Todo App</h3>
         </div>
         <div className="card-body p-4">
           <form onSubmit={handleSubmit} className="row g-3 mb-4">
